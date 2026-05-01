@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turkiking11YT | Liquid Glass Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #030303;
+            --accent: #00f2ff;
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --liquid-color: rgba(0, 242, 255, 0.15);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; cursor: crosshair; }
+
+        body {
+            background-color: var(--bg);
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            min-height: 200vh;
+        }
+
+        /* Fixed NSMO Background */
+        .nsmo-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url('image_4ab4fd.jpg');
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.3) grayscale(0.2);
+            z-index: -3;
+        }
+
+        /* Animated Liquid Blobs */
+        .liquid-blob {
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            background: var(--liquid-color);
+            filter: blur(120px);
+            border-radius: 50%;
+            z-index: -2;
+            animation: move 20s infinite alternate cubic-bezier(0.45, 0, 0.55, 1);
+        }
+
+        .blob-2 {
+            right: -100px;
+            top: 20%;
+            background: rgba(255, 255, 255, 0.05);
+            animation-duration: 25s;
+            animation-delay: -5s;
+        }
+
+        @keyframes move {
+            from { transform: translate(-10%, -10%) scale(1); }
+            to { transform: translate(20%, 30%) scale(1.2); }
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 100px 20px;
+        }
+
+        /* Liquid Glass Panel */
+        .glass-panel {
+            background: var(--glass);
+            backdrop-filter: blur(35px) saturate(150%);
+            -webkit-backdrop-filter: blur(35px) saturate(150%);
+            border: 1px solid var(--glass-border);
+            border-radius: 50px;
+            padding: 80px 60px;
+            margin-bottom: 40px;
+            box-shadow: 0 40px 100px rgba(0,0,0,0.6);
+        }
+
+        .senior-status {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--accent);
+            letter-spacing: 4px;
+            font-size: 0.8rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 10vw, 5rem);
+            font-weight: 900;
+            line-height: 0.9;
+            letter-spacing: -4px;
+            margin-bottom: 30px;
+        }
+
+        .description {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.6);
+            max-width: 600px;
+        }
+
+        /* Engineering Cards */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.02);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 30px;
+            padding: 40px;
+            transition: all 0.4s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            background: rgba(255,255,255,0.05);
+            border-color: var(--accent);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            opacity: 0.8;
+            border: 1px solid var(--glass-border);
+        }
+
+        .card h3 { margin-bottom: 15px; font-weight: 700; }
+        .card p { font-size: 0.9rem; color: rgba(255,255,255,0.5); line-height: 1.6; }
+
+        footer {
+            margin-top: 100px;
+            text-align: center;
+            padding-bottom: 50px;
+        }
+
+        .footer-logo {
+            width: 40px;
+            opacity: 0.2;
+            filter: invert(1);
+        }
+
+        @media (max-width: 768px) {
+            .glass-panel { padding: 40px 30px; }
+            h1 { font-size: 3.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nsmo-bg"></div>
+    <div class="liquid-blob"></div>
+    <div class="liquid-blob blob-2"></div>
+
+    <div class="container">
+        
+        <header class="glass-panel">
+            <span class="senior-status">INFORMATICS SENIOR // CLASS OF 2026</span>
+            <h1>Placeholder Studios</h1>
+            <p class="description">
+                As a developer under the handle **Turkiking11YT**, I integrate **NSMO competition logic** into **Luau engineering**. Specializing in character kinematics, movement systems, and modular informatics frameworks.
+            </p>
+        </header>
+
+        <div class="grid">
+            <!-- Luau Project -->
+            <div class="card">
+                <img src="watermarked_img_9741569286242007512.png" alt="Luau Scripting">
+                <h3>Luau Engineering</h3>
+                <p>Developing advanced movement systems (crouching, sprinting) and proprietary debugging modules within the Roblox engine.</p>
+            </div>
+
+            <!-- Math/Physics Project -->
+            <div class="card">
+                <img src="Untitled (9).png" alt="Physics Logic">
+                <h3>Physics Logic</h3>
+                <p>Applying **algebraic polynomials** and **NSMO science principles** to mechanical simulation and game engine physics.</p>
+            </div>
+
+            <!-- iOS Project -->
+            <div class="card">
+                <div style="height: 180px; background: rgba(255,255,255,0.03); border-radius: 15px; margin-bottom: 25px; display: flex; align-items: center; justify-content: center;">
+                    <img src="b58c9862b0dbd1a933c2a8d8e07bbace.png" style="width: 80px; height: auto; border: none; opacity: 0.5;" alt="Logo">
+                </div>
+                <h3>Mobile Infrastructure</h3>
+                <p>Designing native **SwiftUI** applications with **Firebase** backends for cross-platform data management.</p>
+            </div>
+        </div>
+
+        <footer>
+            <img src="New Project (92).png" class="footer-logo" alt="Studio Mark">
+            <p style="font-size: 0.7rem; opacity: 0.4; margin-top: 10px;">EST. 2026 // TURKIKING11YT</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
