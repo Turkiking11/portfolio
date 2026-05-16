@@ -1,10 +1,35 @@
-function animateName() {
-  const name = document.querySelector(".name");
+// script.js
 
-  name.style.transition = "0.5s";
-  name.style.transform = "scale(1.2)";
+// Smooth scrolling to sections
+document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        document.querySelector(targetId).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
 
-  setTimeout(() => {
-    name.style.transform = "scale(1)";
-  }, 500);
-}
+// Form submission handling
+const form = document.querySelector('form');
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Get form values
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    
+    // Perform form validation or send data to a server
+    console.log('Name:', name);
+    console.log('Email:', email);
+    console.log('Message:', message);
+    
+    // Reset form
+    form.reset();
+    
+    // Show success message
+    alert('Thank you for your message!');
+});
