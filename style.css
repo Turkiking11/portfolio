@@ -1,59 +1,79 @@
+/* style.css */
+
+/* Reset default styles */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Global styles */
 body {
-  background: black;
-  color: white;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
 
-.container {
-  text-align: center;
-  padding: 20px;
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
 }
 
-.name {
-  font-size: 60px;
-  font-weight: bold;
-  letter-spacing: 3px;
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
 }
 
-.subtitle {
-  font-size: 18px;
-  opacity: 0.7;
-  margin-top: 10px;
+nav a {
+    color: #fff;
+    text-decoration: none;
 }
 
-.line {
-  width: 80px;
-  height: 2px;
-  background: white;
-  margin: 20px auto;
+/* Main content styles */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
-.desc {
-  margin-top: 10px;
-  opacity: 0.8;
+section {
+    margin-bottom: 2rem;
 }
 
-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  border: 1px solid white;
-  background: transparent;
-  color: white;
-  cursor: pointer;
-  transition: 0.3s;
+/* Project styles */
+.project {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #f4f4f4;
 }
 
-button:hover {
-  background: white;
-  color: black;
-} 
+/* Contact form styles */
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+form button {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
