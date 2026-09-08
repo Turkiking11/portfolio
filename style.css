@@ -23,7 +23,6 @@ p {
   text-align: center;
 }
 
-/* --- Added Glassmorphism Top Bar Styles Below --- */
 .navbar {
   position: fixed;
   top: 0;
@@ -64,7 +63,10 @@ p {
   color: white;
 }
 
-/* Pushes your original content down so the top bar doesn't cover your h1 */
 .main-content {
   margin-top: 100px; 
+}
+
+.bottom a {
+  color: #FFFFFF80;
 }
