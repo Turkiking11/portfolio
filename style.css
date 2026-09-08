@@ -11,6 +11,13 @@ h1 {
   flex-wrap: wrap;
 }
 
+h2 {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 p {
   text-align: center;
 }
@@ -21,6 +28,7 @@ h1 span {
   white-space: pre; 
   animation: wave 2s infinite ease-in-out;
 }
+
 
 /* The animation steps */
 @keyframes wave {
